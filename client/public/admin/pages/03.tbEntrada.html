@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/admin/css/03.tb.css"> <!-- CSS da sua pagina -->
+  <link rel="stylesheet" href="admin/style.padrao/00.menu.padrao.css"> <!-- CSS do menu -->
+  <link rel="stylesheet" href="admin/style.padrao/00.css.padrao.css"> <!-- CSS padrão -->
+
+  <!-- link do icons -->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&amp;display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined" rel="stylesheet">
+  <title>Entrada de produtos</title>
+</head>
+
+<body>
+  <main class="section-all">
+    <header class="nav-header">
+      <nav class="sidebar">
+        <div class="logo">
+          <img src="/imgs/logo.png" alt="Logo da Empresa">
+        </div>
+        <ul>
+          <li><a href="/menu"><span class="material-icons-outlined">home</span>Home</a></li>
+            <li><a href="/tabela/produto"><span class="material-icons">add_circle_outline</span> Administração de <br>produtos</a></li>
+            <li><a href="/entrada" id="activate"><span class="material-icons">north_east</span> Entrada Estoque</a></li>
+            <li><a href="/saida"><span class="material-icons">south_west</span> Saída Estoque</a></li>
+            <li><a href="/caixa"><span class="material-icons">attach_money</span> Abrir venda <br> produtos </a></li>
+            <li><a href="/pedidos"><span class="material-icons-outlined">check_circle</span> Pedidos <br> realizados</a></li>
+            <li><a href="/dashboard"><span class="material-icons-outlined">leaderboard</span> Dashboard</a></li>
+            <li><a href="/funcionarios"><span class="material-icons">people</span> Ver funcionários</a></li>
+        </ul>
+        <div class="bottom-section">
+          <div class="icon-end">
+            <span class="material-icons">account_circle</span>
+          </div>
+          <p id="first">Nome</p>
+          <p id="second">xxxx@gggg.ccc</p>
+          <div class="buttons-container">
+            <button>
+              <span class="material-icons" id="iconOne">settings</span>
+            </button>
+            <button id="buttonLogout">
+              <span class="material-icons" id="iconTwo">logout</span>
+            </button>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <article class="section-one">
+      <section class="section-main">
+        <div class="content-header">
+          <div class="titulo">
+            <h1>Entrada de produtos</h1>
+          </div>
+          <div class="cadastrar">
+            <a href="/entrada/pedido">
+              <button> <b>+</b> Entradas</button>
+            </a>
+          </div>
+        </div>
+        <hr><!--LINHA --></hr>
+
+        <div>
+          <input class="search" type="text" id="searchbar" name="searchbar" placeholder="Pesquisar produto" onkeyup="filtrar()">
+        </div>
+
+        <div class="content-table">
+          <table>
+            <thead id="tabelaProdutos">
+              <tr>
+                <!-- <th>CÓDIGO DA COMPRA</th> -->
+                <th>PRODUTO</th>
+                <th>DATA DA ENTRADA</th>
+                <th>QTD COMPRADA</th>
+                <th>PREÇO UNITÁRIO DA COMPRA</th>
+                <th>VALOR COMPRADO</th>
+              </tr>
+            </thead>
+            <tbody id="tbody"></tbody>
+          </table>
+        </div>
+      </section>
+    </article>
+  </main>
+ <script src="/admin/scripts/03.tbEntrada.js"></script>
+ <script src="/admin/scripts/01.menu.js"></script>
+</body>
+
+</html>

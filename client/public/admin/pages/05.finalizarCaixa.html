@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/admin/style.padrao/00.css.padrao.css"><!-- CSS padrão -->
+    <link rel="stylesheet" href="/admin/style.padrao/00.menu.padrao.css"> <!-- CSS do menu -->
+    <link rel="stylesheet" href="/admin/css/05.finaliza.css"> <!-- CSS da sua pagina -->
+    <!-- link do icons -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"> 
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&amp;display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined" rel="stylesheet">
+    <title>Cadastro de produtos</title>
+</head>
+
+<body>
+    <main class="section-all">
+            <header class="nav-header">    
+                <nav class="sidebar">
+                    <div class="logo">
+                        <img src="/imgs/logo.png" alt="Logo da Empresa">
+                    </div>
+                    <ul>
+                        <li><a href="/menu"><span class="material-icons-outlined">home</span>Home</a></li>
+                  <li><a href="/tabela/produto"><span class="material-icons">add_circle_outline</span> Administração de <br>produtos</a></li>
+                  <li><a href="/entrada"><span class="material-icons">north_east</span> Entrada Estoque</a></li>
+                  <li><a href="/saida"><span class="material-icons">south_west</span> Saída Estoque</a></li>
+                  <li><a href="/caixa" id="activate"><span class="material-icons">attach_money</span> Abrir venda <br> produtos </a></li>
+                  <li><a href="/pedidos"><span class="material-icons-outlined">check_circle</span> Pedidos <br> realizados</a></li>
+                  <li><a href="/dashboard"><span class="material-icons-outlined">leaderboard</span> Dashboard</a></li>
+                  <li><a href="/funcionarios"><span class="material-icons">people</span> Ver funcionários</a></li>
+                    </ul>
+                    <div class="bottom-section">
+                        <div class="icon-end">
+                            <span class="material-icons">account_circle</span>
+                        </div>
+                        <p id="first">Nome</p>
+                        <p id="second">xxxx@gggg.ccc</p>
+                        <div class="buttons-container">
+                        <button>
+                            <span class="material-icons" id="iconOne">settings</span>
+                        </button>
+                        <button id="buttonLogout">
+                            <span class="material-icons" id="iconTwo">logout</span>
+                        </button>
+                        </div>
+                    </div>
+                  </nav>
+            </header>
+            <article class="section-one">
+                <section class="section-main">
+                    <div><h1><a href="/caixa"><span class="material-icons">reply_all</span></a> Finalizar compra</h1><hr></hr></div>
+                    <div><h2>Checkout</h2></div>
+            
+                    <form class="form" id="formularioCaixa">
+                        <div>
+                            <label for="metodo">Método de pagamento:</label>
+                            <select id="metodo" class="quebra-linha" name="Dinheiro">Dinheiro
+                                <option name="Dinheiro">Dinheiro</option>
+                                <option name="Pix">Pix</option>
+                                <option name="A prazo">A prazo</option>
+                            </select>
+                        </div>
+                        <div><label for="total"> Total da compra:</label><input id="total"  class="quebra-linha" type="text" readonly required name="total" ></div>
+                        <div class="produto">
+                            <table id="tabelaProdutos">
+                                <thead>
+                                    <tr>
+                                        <th>Produto</th>
+                                        <th>Qtd</th>
+                                        <th>Valor total</th>
+                                        <th></th>
+                                        
+                                    </tr>
+                                </thead>
+
+                                <!-- Molde para usar no javascript -->
+                                <template id="produto-template">
+                                <tr class="item-produto">
+                                    <td class="nome"></td>
+                                    <td class="tdQtd"></td>
+                                    <td class="tdValor"></td>
+                                    <td class="tdIcon"><span class="material-icons-outlined delete">delete</span></td>
+                                </tr>
+                                </template>
+                            </table>
+                        </div>  
+                        <div><button id="compra-btn">Comprar</button></div>
+
+                        <div id="popup" class="popup">
+                            <div class="popup-content">
+                                <span class="material-icons-outlined close-btn">close</span>
+                                <span class="material-icons-outlined icon"></span>
+                                <p class="message"></p>
+                                <button  class="back-btn">Abrir caixa</button>
+                            </div>
+                        </div>
+                        
+                    </form>
+            </section>
+        </article>
+    </main>
+    <script src="/admin/scripts/05.finalizarCaixa.js"></script>
+    <script src="/admin/scripts/01.menu.js"></script>
+</body>
+</html>

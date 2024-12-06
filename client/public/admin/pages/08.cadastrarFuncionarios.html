@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/admin/style.padrao/00.css.padrao.css"><!-- CSS padrão -->
+    <link rel="stylesheet" href="/admin/style.padrao/00.menu.padrao.css"> <!-- CSS do menu -->
+    <link rel="stylesheet" href="/admin/css/08.style.css"> <!-- CSS da sua pagina -->
+    <!-- link do icons -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"> 
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&amp;display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined" rel="stylesheet">
+    <title>Cadastro de produtos</title>
+</head>
+
+<body>
+    <main class="section-all">
+            <header class="nav-header">    
+                <nav class="sidebar">
+                    <div class="logo">
+                        <img src="/imgs/logo.png" alt="Logo da Empresa">
+                    </div>
+                    <ul>
+                        <li><a href="/menu"><span class="material-icons-outlined">home</span>Home</a></li>
+                        <li><a href="/tabela/produto"><span class="material-icons">add_circle_outline</span> Administração de <br>produtos</a></li>
+                        <li><a href="/entrada"><span class="material-icons">north_east</span> Entrada Estoque</a></li>
+                        <li><a href="/saida"><span class="material-icons">south_west</span> Saída Estoque</a></li>
+                        <li><a href="/caixa"><span class="material-icons">attach_money</span> Abrir venda <br> produtos </a></li>
+                        <li><a href="/pedidos"><span class="material-icons-outlined">check_circle</span> Pedidos <br> realizados</a></li>
+                        <li><a href="/dashboard"><span class="material-icons-outlined">leaderboard</span> Dashboard</a></li>
+                        <li><a href="/funcionarios" id="activate"><span class="material-icons">people</span> Ver funcionários</a></li>
+                    </ul>
+                    <div class="bottom-section">
+                        <div class="icon-end">
+                            <span class="material-icons">account_circle</span>
+                        </div>
+                        <p id="first">Nome</p>
+                        <p id="second">xxxx@gggg.ccc</p>
+                        <div class="buttons-container">
+                        <button>
+                            <span class="material-icons" id="iconOne">settings</span>
+                        </button>
+                        <button id="buttonLogout">
+                            <span class="material-icons" id="iconTwo">logout</span>
+                        </button>
+                        </div>
+                    </div>
+                  </nav>
+            </header>
+     <article class="section-one">
+                <section class="section-main">
+                    <div><h1><a href="/funcionarios"><span class="material-icons">reply_all</span></a> Cadastrar funcionários</h1><hr></hr></div>
+                    <div><h2>Dados do funcionário</h2></div>
+            
+                    <form class="form" id="formularioFuncionario" action="/funcionarios/cadastro" method="POST">
+                        
+                        <div><label for="name" > Nome:</label><input id="name" class="quebra-linha" type="text" placeholder="digite" name="nome" required></div>
+                       
+                        <div><label for="lastname"> Sobrenome:</label><input id="lastname" class="quebra-linha" type="text" placeholder="digite" name="sobrenome" required></div>
+
+                        <div><label for="email"> E-mail:</label><input id="email" class="quebra-linha" type="email" placeholder="xxxx@xxxx.com" name="email" required></div>
+
+                        <div><label for="number"> Contato:</label><input id="number" class="quebra-linha" type="tel" placeholder="(xx)xxxx-xxxx" name="number" required></div>
+                        
+                        <div><label for="password"> Senha:</label><input id="password" class="quebra-linha" type="password" placeholder="crie uma senha" name="senha" required></div>
+                       
+                        <div><label for="checkPassword">Senha:</label><input id="checkPassword" class="quebra-linha" type="password" placeholder="confirme a senha" name="confirmarSenha" required></div>
+                        
+                        <div><label for="checkBox">Acesso administrativo? </label><input id="checkBox" type="checkbox" name="tipoUser"></div>                        
+                        
+                        <div><button id="cadastroFuncionario"> Cadastrar funcionário</button></div>
+
+                        <div id="popup" class="popup">
+                            <div class="popup-content">
+                                <span class="material-icons-outlined close-btn">close</span>
+                                <span class="material-icons-outlined icon"></span>
+                                <p class="message"></p>
+                                <button class="back-btn">Voltar para "ver funcionários"</button>
+                            </div>
+                        </div>
+
+                    </form>
+
+                </section>
+            </article>
+    </main>
+    <script src="/admin/scripts/08.cadastroFuncionario.js"></script>
+    <script src="/admin/scripts/01.menu.js"></script>
+</body>
+</html>

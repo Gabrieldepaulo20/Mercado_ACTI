@@ -1,0 +1,171 @@
+.sidebar {
+    position: fixed;
+    width: 230px;
+    height: 100% !important;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    background-color: #ffffff;
+    box-shadow: 9px 0px 90px 6px rgba(0, 0, 0, 0.1);
+}
+
+.sidebar .logo {
+  margin-top: 5vh;
+  margin-bottom: 4vh;
+  text-align: center;
+  padding: 0px;
+  overflow: hidden;
+}
+
+.sidebar .logo img {
+  width: 120px;
+  height: 110px;
+  top: 33px;
+  left: 50px;
+}
+
+.sidebar ul {
+  list-style: none;  /* Remove marcadores de lista */
+  padding: 0;   /* Remove padding */
+  margin-left: 20px;
+  /* height: 614; */
+  margin-top: auto;
+}
+
+
+.sidebar ul li {
+    display: block;
+}
+
+
+.sidebar ul li a {
+  display: flex; /* Usa flexbox para alinhar ícones e textos */
+  align-items: center; /* Centraliza itens verticalmente dentro do link */
+  padding: 10px 20px; /* Espaçamento interno para melhor toque */
+  text-decoration: none; /* Remove o sublinhado do link */ 
+  color: #224864; /* Cor do texto */
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 18px;
+  text-align: left;
+  top: 269px;
+  left: 48px;
+  gap: 17px;
+  
+}
+
+.sidebar ul li a:hover, #activate {
+    color: #fff;
+    background: linear-gradient(90deg, #224564 0%, #FAFAFF 100%);
+    border-radius: 21px 0px 0px 21px;
+}
+
+/* Ensure your media queries and other CSS follow here */
+
+.sidebar .bottom-section {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 94px; /* Altura da seção cinza */
+  background-color: #D9D9D9;
+}
+
+.sidebar .icon-end {
+  position: absolute;
+  top: -27px;
+  bottom: 27px; /* Ajuste para que metade do ícone (27px) fique acima da borda da .bottom-section */
+  left: 50%; /* Centraliza horizontalmente */
+  transform: translateX(-50%); /* Corrige apenas horizontalmente */
+  width: 56px;
+  height: 54px;
+}
+
+.sidebar .icon-end .material-icons {
+  font-size: 56px; /* Tamanho do ícone */
+  line-height: 54px; /* Centraliza verticalmente o texto dentro do espaço definido */
+}
+
+.sidebar .bottom-section #first{
+  text-align: center;
+  padding-top: 13px;
+  font-weight: 700;
+  color: #224864;
+  font-size: 13px;
+
+}
+
+.sidebar .bottom-section #second{
+  text-align: center;
+  font-weight: 700;
+  font-size: 11px;
+  margin-top: -13px;
+  color: rgba(34, 72, 100, 0.6);
+}
+
+div.buttons-container {
+  display: flex;
+  margin-top: -14px; /* Ajusta os botões para cima por 15px */
+  padding: 10px; /* Mantém o preenchimento ao redor dos botões */
+  align-items: center;
+  text-align: center; /* Centraliza os botões horizontalmente */
+  gap: 8px;
+  margin-left: 77px;
+}
+
+.buttons-container button {
+  display: flex;
+  width: 26px; /* Largura conforme especificado */
+  height: 21px; /* Altura conforme especificado */
+  background-color: #E8E8E8; /* Cor de fundo conforme especificado */
+  color: white; /* Cor do texto */
+  border: none; /* Sem bordas */
+  border-radius: 6px; /* Bordas arredondadas para estética */
+  cursor: pointer; /* Indica que os botões são clicáveis */
+  font-family: 'Inter', sans-serif; /* Fonte conforme especificado */
+  align-items: center;
+  justify-content: center; /* Alinha horizontalmente ao centro */
+}
+
+
+.buttons-container button:hover {
+  background-color: rgba(34, 72, 100, 0.6); /* Cor ao passar o mouse */
+}
+
+#iconOne {
+  font-size: 16px !important; /* Tamanho ideal para o ícone dentro do botão */
+  color: #AEBAC1;
+  text-align: center;
+  line-height: normal !important;
+
+}
+
+#iconTwo {
+  font-size: 15px !important;
+  color: #AEBAC1;
+  text-align: center;
+  line-height: normal !important;
+}
+
+
+header h1{
+  margin-top: 67px;
+  font-family: Inter;
+  font-size: 40px;
+  font-weight: 700;
+  line-height: 48.41px;
+  text-align: left;
+  
+  }
+
+
+
+header h2{
+  color:#224864;
+}
+
+.alert{
+  background-color: red;
+  font-size: 10rem;
+}
+
+

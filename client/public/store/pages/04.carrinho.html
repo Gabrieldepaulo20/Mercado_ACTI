@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/store/css/04.carrinho.css">
+    <link rel="stylesheet" href="/store/css/menu.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <title>carrinho</title>
+</head>
+<body>
+    <main>
+        <!-- MENU -->
+        <header>
+            <nav class="menu">
+                <div>
+                  <a href="/home"><span class="material-icons" id="activate">home</span></a>
+                  <a href="/perfil"><span class="material-icons" >person_outline</span></a>
+                  <a href="/pedidosUser"><span class="material-icons">description</span></a>
+                </div>
+            </nav>
+        </header>
+        <article class="section-all">
+
+            <section class="content-section">
+                    <div class="shopping-cart logo-account"><a href="/home" class="logo-account"><span class="material-icons" id="leftArrow">chevron_left</span></a>
+                    <h1>Meu carrinho</h1>
+                </div>
+            </section>
+
+            <section class="content-main">
+                <div class="produtos">
+                    <h2>Itens adicionados</h2>
+                    <div class="content-table"> 
+                        <table>
+                            <thead>
+                                <tr>
+                                  <th>Produto</th>
+                                  <th>Qtd</th>
+                                  <th>Valor</th>
+                                  <th></th>
+                                  <th></th>
+                                </tr>
+                            </thead>
+                            <tbody id="bodyTable">
+                                <template id="produto-template">
+                                <tr class="item-produto">
+                                    <td class="nome">Nome do produto</td>
+                                    <td class="qtd">1x</td>
+                                    <td class="valor-uni">R$ --</td>
+                                    <td><a href="#" class="addProdutos"><span class="material-icons addProdutos">add_circle_outline</span></a><br>
+                                    <a href="#" class="removeProdutos"><span class="material-icons removeProdutos">remove_circle_outline</span></a></td>
+                                    <!-- <td><a href="#"><span class="material-icons">delete</span></a></td> -->
+                                </tr>
+                                </template> 
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                        <h2>Total da compra</h3>
+                        <div class="totalc"><h3 class="total-compra">R$ --,--</h3></div>
+                    </div>
+                    <div class="button-pay">
+                        <h2>Método de pagamento:</h3>
+                        <select id="metodo" class="quebra-linha" name="Dinheiro">Dinheiro
+                            <option name="Dinheiro">Dinheiro</option>
+                            <option name="Pix">Pix</option>
+                            <option name="A prazo">A prazo</option>
+                        </select>
+                        <button id="btnCompra">Comprar</button>
+                    </div>                 
+                    <div class="tamanho"><!-- Para o menu e o total não sobrepor conteúdo--></div> 
+                </div>
+            </section>
+        </article>
+    </main>
+    <script src="/store/scripts/04.carrinho.js"></script>
+</body>
+</html>

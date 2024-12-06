@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/admin/css/04.tb.css"> <!-- CSS da sua pagina -->
+  <link rel="stylesheet" href="admin/style.padrao/00.menu.padrao.css"> <!-- CSS do menu -->
+  <link rel="stylesheet" href="admin/style.padrao/00.css.padrao.css"> <!-- CSS padrão -->
+
+  <!-- link do icons -->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&amp;display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined" rel="stylesheet">
+  <title>Saída de produtos</title>
+</head>
+
+<body>
+  <main class="section-all">
+    <header class="nav-header">
+      <nav class="sidebar">
+        <div class="logo">
+          <img src="/imgs/logo.png" alt="Logo da Empresa">
+        </div>
+        <ul>
+          <li><a href="/menu"><span class="material-icons-outlined">home</span>Home</a></li>
+            <li><a href="/tabela/produto"><span class="material-icons">add_circle_outline</span> Administração de <br>produtos</a></li>
+            <li><a href="/entrada" ><span class="material-icons">north_east</span> Entrada Estoque</a></li>
+            <li><a href="/saida" id="activate"><span class="material-icons">south_west</span> Saída Estoque</a></li>
+            <li><a href="/caixa"><span class="material-icons">attach_money</span> Abrir venda <br> produtos </a></li>
+            <li><a href="/pedidos"><span class="material-icons-outlined">check_circle</span> Pedidos <br> realizados</a></li>
+            <li><a href="/dashboard"><span class="material-icons-outlined">leaderboard</span> Dashboard</a></li>
+            <li><a href="/funcionarios"><span class="material-icons">people</span> Ver funcionários</a></li>
+        </ul>
+        <div class="bottom-section">
+          <div class="icon-end">
+            <span class="material-icons">account_circle</span>
+          </div>
+          <p id="first">Nome</p>
+          <p id="second">xxxx@gggg.ccc</p>
+          <div class="buttons-container">
+            <button>
+              <span class="material-icons" id="iconOne">settings</span>
+            </button >
+            <button id="buttonLogout">
+              <span class="material-icons" id="iconTwo">logout</span>
+            </button>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <article class="section-one">
+      <section class="section-main">
+        <div class="content-header">
+          <div class="titulo">
+            <h1>Saída de produtos</h1>
+          </div>
+        </div>
+        <hr><!--LINHA --></hr>
+
+        <div>
+          <input class="search" type="text" id="searchbar" name="searchbar" placeholder="Pesquisar saída" onkeyup="filtrar()">
+          <a href="#" id="exportarExcel">
+            <span class="material-icons-outlined">file_download</span>
+          </a>
+        </div>
+
+        <div class="content-table">
+          <table id="tabelaProdutos">
+              <thead>
+                <tr>
+                  <th>CÓDIGO DO<br>PRODUTO</th>
+                  <th>CÓDIGO DA<br>VENDA</th>
+                  <th id="funcionarioTh">FUNCIONÁRIO(A)</th>
+                  <th>PRODUTO</th>
+                  <th>DATA DA SAÍDA</th>
+                  <th>QTD<br>VENDIDA</th>
+                  <th>VALOR DA<br>VENDA</th>
+                  <th>FORMA DE<br>PAGAMENTO</th>
+                </tr>
+              </thead>
+
+              <!-- Molde para usar no javascript -->
+              <template id="produto-template">
+                <tr>
+                  <td id="codigo_produto"></td>
+                  <td id="codigo_venda"></td>
+                  <td id="funcionario"></td>
+                  <td id="produto"></td>
+                  <td id="data_saida"></td>
+                  <td id="qtd"></td>
+                  <td id="valorCompra"></td>
+                  <td id="forma_pgto"></td>
+                </tr>
+              </template>
+            <tbody id="tbody"></tbody>
+          </table>
+        </div>
+      </section> <!-- Fechando a tag section que estava aberta -->
+    </article>
+  </main>
+  <script src="https://cdn.jsdelivr.net/npm/xlsx@0.18.5/dist/xlsx.full.min.js"></script> <script src="https://cdn.jsdelivr.net/npm/xlsx@0.18.5/dist/xlsx.full.min.js"></script>
+  <script src="/admin/scripts/04.tbsaidas.js"></script>
+  <script src="/admin/scripts/01.menu.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/store/css/02.pedidos.css">
+    <link rel="stylesheet" href="/store/css/menu.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined" rel="stylesheet">
+    <title>meus pedidos</title>
+</head>
+
+<body>
+    <header>
+        <nav class="menu">
+            <div>
+                <a href="/home"><span class="material-icons">home</span></a>
+                <a href="/perfil"><span class="material-icons" >person_outline</span></a>
+                <a href="/pedidosUser"><span class="material-icons" id="activate">description</span></a>
+            </div>
+        </nav>
+    </header>
+    
+    <main>
+        <article class="section-all">
+
+            <section class="content-section">
+                <div class="profile-info">
+                    <a href="/home" class="logo-account"><span class="material-icons-outlined" id="leftArrow">chevron_left</span></a>
+                    <h1>Meus pedidos</h1>
+                    <a href="#"><span class="material-icons" id="logoutIcon">exit_to_app</span></a>
+                </div>
+            </section>
+
+            <section class="content-main">
+                <div class="squares">
+                    <template class="pedidosUser">
+                        <div class="square">
+                            <h2>ID do pedido:</h2>
+                            <div class="text-status">
+                                <span class="material-icons-outlined" id="hGlassIcon">hourglass_empty</span>
+                                <span>Aguardando confirmação pix</span>
+                            </div>
+                            <div class="elements">
+                                <p>1x Coca Cola 250 mL</p>
+                                <p>1x Amendoim</p>
+                                <p>1x Twix</p>
+                            </div>
+                            <p class="date">25/04/2024</p>
+                            <div class="price">
+                                <span id="total">Total</span>
+                                <span id="valor">R$ 14,00</span>
+                            </div>
+                        </div>
+                    </template>
+                </div>
+            </section>
+        </article>
+    </main>
+    <script src="/store/scripts/02.pedidos.js"></script>
+</body>
+
+</html>

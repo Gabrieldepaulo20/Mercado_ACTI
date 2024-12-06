@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/store/css/01.home.css">
+    <link rel="stylesheet" href="/store/css/menu.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <title>home</title>
+</head>
+
+<body>
+    <main>
+        <article class="section-all">
+            <section class="content-section">
+                <div class="profile-info">
+                    <div class="logo-account"><span class="material-icons">account_circle</span></div>
+                    <div class="text"><h1 id="nameUser"></h1> <a href="/perfil">Ver perfil ></a></div>
+                    <div class="logo-exit"><span class="material-icons">exit_to_app</span></div>                                                                                  
+                </div>
+            </section>
+            <section class="content-main">
+                <nav class="categorias">
+                    <h2>Categorias</h2>
+                    <button><a href="#Doces"><span class="material-icons">cake</span><br> Doces</a></button>
+                    <button><a href="#Salgados"><span class="material-icons">food_bank</span><br> Salgados</a></button>
+                    <button><a href="#Bebidas"><span class="material-icons">emoji_food_beverage</span><br> Bebidas</a></button>
+                </nav>
+                <div class="produtos">
+                    <h2>Produtos</h2>
+                    <div id="Doces">
+                        <h3>Doces</h3>
+                        <!-- ADICIONAR ITENS, conforme add um produto no banco é só duplica a class item-produto -->
+                        <template id="produto-template">
+                        <div class="item-produto">
+                            <div><p class="prod">nome do produto</p></div>
+                            <p class="vlrUnitario">preço do produto</p>
+                            <div id="qtd">
+                                <span class="material-icons addProdutos">add_circle_outline</span>
+                                <span class="qtdAtual">0</span>
+                                <span class="material-icons removeProdutos">remove_circle_outline</span>
+                            </div>
+                        </div>
+                        </template>
+
+                    </div>
+                    <div id="Salgados">
+                        <h3>Salgados</h3>
+                        <!-- ADICIONAR ITENS -->
+  
+                    </div>
+                    <div id="Bebidas">
+                        <h3>Bebidas</h3>
+                        <!-- ADICIONAR ITENS -->
+                    
+                    </div>
+                    <div class="tamanho"><!-- Para o menu e o total não sobrepor conteúdo--></div> 
+                </div>
+            </section>
+            <div class="total">
+                <p>Total carrinho</p>
+                <p id="valorTotal">R$ 0</p>
+                <p id="qtdItens">0 itens</p>
+                <button onclick="window.location.href='/carrinho'" class="carrinho">Ver carrinho</button>
+            </div>
+            <header>
+            <nav class="menu">
+                <div>
+                  <a href="/home"><span class="material-icons" id="activate">home</span></a>
+                  <a href="/perfil"><span class="material-icons" >person_outline</span></a>
+                  <a href="/pedidosUser"><span class="material-icons">description</span></a>
+                </div>
+            </nav>
+        </header>
+        </article>
+    </main>
+
+    <script src="/store/scripts/01.home.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,194 @@
+.content-header {
+    width: 100%;
+    height: 12vh;
+    padding: 10px 0px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.tabela-container {
+    overflow-y: scroll;
+    width: 85%; /* Ajuste conforme necessário */
+    height: 35vh;
+    background-color: white;
+    padding: 20px; /* Padding geral */
+    border-radius: 15px;
+    box-shadow: 4px 4px 8px 4px rgba(0, 0, 0, 0.145);
+    max-height: 400px; 
+    overflow-y: auto; 
+}
+
+table {
+    width: 100%; 
+    border-collapse: collapse;
+    margin-top: 10px;
+}
+
+th {
+    font-size: 12px;
+    color: #666;
+    border-top: none; /* Remove a borda superior */
+    padding-bottom: 10px; /* Espaçamento abaixo do texto */
+}
+
+td {
+    text-align: left;
+    padding: 10px; 
+    font-size: 14px;
+}
+
+tr:nth-child(even) {
+    background-color: #edf6fd;
+}
+
+thead th {
+    position: sticky; /* Fixa o cabeçalho */
+    top: 56px; /* Define a posição abaixo da div fixa */
+    background-color: #fff; /* Fundo do cabeçalho */
+    padding: 10px;
+    z-index: 1; /* Menor prioridade que a div fixa */
+    border-bottom: 1px solid #E1E0E7; /* Borda inferior do cabeçalho */
+}
+.filtrar {
+    font-weight: 600;
+}
+.title-table{
+    display: flex;
+    justify-content:space-between ;
+    align-content: start;
+    height: 8vh;
+    position: sticky; /* Fixa dentro do contêiner pai */
+    top: 0; /* Define a distância do topo do contêiner */
+    background-color: #fff;
+}
+.quebra-linha{
+    display: block;
+}
+
+select {
+    background-color: #f0f0f0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    color: #333;
+    height: 5vh;
+    width: 7vw;
+}
+
+.titu {
+    color: #224864; 
+    font-size: 24px; 
+    font-weight: 700; 
+}
+
+.linha2 {
+    border: none; /* Certifique-se de que não há borda superior */
+    /* border-top: 1px solid #ccc; Se precisar de uma linha horizontal, mantenha isso ou remova */
+    margin: 10px 0; /* Espaçamento em cima e embaixo */
+}
+
+.local{
+
+    padding: 1% 1%;
+    text-align: left;
+}
+
+#filtro{
+    cursor: pointer;
+}
+
+/* painel */
+.box-info {
+    width: 90%; 
+    /* margin: 40px auto;  */
+    display: flex; 
+    justify-content: space-between; 
+    flex-wrap: wrap;
+} 
+
+
+.box-info-single {
+    flex: 1; 
+    margin: 10px; 
+    display: flex;
+    flex-direction: column; 
+    justify-content: center; 
+    padding: 10px;
+    background-color: #fff; 
+    border-radius: 10px; 
+    color: black; 
+    box-sizing: border-box; 
+    box-shadow: 4px 4px 8px 4px rgba(0, 0, 0, 0.145); /* Sombra padrão */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Transições suaves */
+}
+
+/* Efeito de flutuação ao passar o mouse */
+.box-info-single:hover {
+    transform: translateY(-5px); /* Move a caixa para cima */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); /* Aumenta a sombra */
+}
+
+
+.info-text {
+    position: relative;
+    padding-right: 30px; 
+}
+
+.icon {
+    position: absolute;
+    right: 10px; 
+    top: 30%;
+    transform: translateY(-50%); 
+    font-size: 40px;
+    color: red;
+}
+
+.icon2 {
+    position: absolute;
+    right: 10px; 
+    top: 30%;
+    transform: translateY(-50%); 
+    font-size: 40px;
+    color: green;
+}
+
+.icon3 {
+    position: absolute;
+    right: 10px; 
+    top: 30%;
+    transform: translateY(-50%); 
+    font-size: 40px;
+    color: blue;
+}
+
+.large-value {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.cor {
+    font-size: 12px;
+    font-weight: bold;
+}
+
+.linha {
+    width: 95%;
+    height: 2px;
+    margin-left: 100px;
+    background-color: gray;
+    border: none;
+}
+
+.dash {
+    margin-left: 100px;
+    margin-top: 50px;
+}
+
+.segundotitulo {
+    margin-left: 2vh;
+}
+
+h2{
+    font-size: 20px;
+    color: #224864;
+}

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="/store/css/03.perfil.css">
+        <link rel="stylesheet" href="/store/css/menu.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined" rel="stylesheet">
+    <title>perfil</title>
+</head>
+<body>
+    <header>
+        <nav class="menu">
+            <div>
+              <a href="/home"><span class="material-icons" >home</span></a>
+              <a href="/perfil"><span class="material-icons" id="activate">person_outline</span></a>
+              <a href="/pedidosUser"><span class="material-icons">description</span></a>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <article class="section-all">
+            <section class="content-section">
+                <div class="profile-info">
+                    <a href="/home"><span class="material-icons-outlined" id="leftArrow">chevron_left</span></a>
+                    
+                    <h1>Meu perfil</h1>
+                    <div><a href="#"><span class="material-icons" id="logoutIcon">exit_to_app</span></a></div>
+                    <p>Vizualize e acompanhe todas suas informações.</p>                                                                          
+                </div>
+            </section>
+            <section class="content-main">
+                    <h2>Informações do perfil:</h2>
+                    <!-- <span class="material-icons" id="accountIcon">account_circle</span>
+                    <button><span class="material-icons-outlined">add_a_photo</span></button> -->
+                    <form class="form">
+                        <div>
+                            <label for="input-name">Nome:</label>
+                            <input class="quebra-linha" type="name" id="input-name">
+                        </div>
+                        <div>
+                            <label for="input-email">Email:</label>
+                            <input class="quebra-linha" type="email" id="input-email" readonly>
+                        </div>
+                        <div>
+                            <label for="input-password">Senha:</label>
+                            <input class="quebra-linha" type="password" id="input-password" placeholder=""> 
+                        </div>
+                        <div>
+                            <label for="input-contact">Contato:</label>
+                            <input class="quebra-linha" type="contact" id="input-contact"placeholder="(xx)xxxxxxxx"> 
+                        </div>
+                        <div><button id="atualizar" type="button">Salvar alterações</button></div>
+                    </form>
+                    <div id="popup2" class="popup">
+                        <div class="popup-content">
+                            <p class="message">Dados atualizado com sucesso!</p>
+                            <button class="confirmar">OK</button>
+                        </div>
+                    </div>
+            </section>
+        </article>
+    </main>
+    <script src="/store/scripts/03.perfil.js"></script>
+</body>
+</html>

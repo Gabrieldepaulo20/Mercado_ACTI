@@ -1,0 +1,120 @@
+:root{
+    --primary-color: #E8E8E8;
+    --background-color-: #224864;
+    --border-width-buttons: 0.2rem;
+    --font-size-buttons: 3vh;
+    --font-family: 'Inter', sans-serif;
+    --font-family-bottom: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif
+}
+/*Estrutura da sessão dois*/
+.form{
+    width: 70vh;
+    height: 55vh;
+    box-shadow: 4px 4px 7px 7px rgba(1, 1, 1, 0.096); 
+    border-radius: 10px;
+    padding-top: 20px;
+    padding-left: 50px;
+    background-color: #ffffff;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 12vh 12vh 6vh 13vh;
+    grid-template-areas: 
+    "name sobrenome"
+    "email contato"
+    "senha Nsenha"
+    "checkBox checkBox"
+    "bottom bottom";
+}
+.form div:nth-child(1){
+    grid-area: name;
+}
+.form div:nth-child(2){
+    grid-area: sobrenome;
+}
+.form div:nth-child(3){
+    grid-area: email;
+}
+.form div:nth-child(4){
+    grid-area: contato;
+}
+.form div:nth-child(5){
+    grid-area: senha;
+}
+.form div:nth-child(6){
+    grid-area: Nsenha;
+}
+.form div:nth-child(7){
+    grid-area: checkBox;
+    display: flex;
+    justify-content:left;
+    align-items: center;
+}
+.form div:nth-child(8){
+    grid-area: bottom;
+    display: flex;
+    justify-content:center;
+    padding-right: 0vh;
+}
+
+.quebra-linha{
+    display: block;
+}
+
+/*estilização do bloco formulario*/
+input{
+    width: 30vh;
+    height: 5vh;
+    border: #0000001e solid 1.5px;
+    border-radius: 8px;
+    padding-left: 0.5rem;
+    }
+
+button{
+    height: 55px;
+    width: 40vh;
+    margin-right: 20px;
+    font-size: var(--font-size-buttons);
+    font-weight: bold;
+}
+label{
+    font-weight: bold;
+}
+
+.material-icons:hover{
+    cursor: pointer;
+}
+   
+input#codigo{
+    width: 20vh;
+}
+input#valor-uni{
+    width: 20vh;
+}
+#produto{
+    width: 30vh;
+    height: 6vh;
+    border: #0000004e solid 1.5px;
+    border-radius: 8px;
+}
+
+#buttonPesquisa{
+    margin-left: 1000px;
+    background-color: red;
+}
+
+/* Estilização do checkbox */
+input[type="checkbox"] {
+    appearance: none; 
+    width: 25px;
+    height: 25px;
+    border: none;
+    background-color: rgb(237, 21, 21);
+    border-radius: 50%;
+    cursor: pointer;
+  }
+  
+  /* Estilo quando o checkbox está marcado */
+  input[type="checkbox"]:checked {
+    background-color: #28a745; /* Cor de fundo */
+    border-color: #28a745; /* Cor da borda */
+  }

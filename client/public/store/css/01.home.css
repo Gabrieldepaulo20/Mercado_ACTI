@@ -1,0 +1,314 @@
+:root{
+    --primary-color: #E8E8E8;
+    --background-color-: #224864;
+    --text-aligh-h1-h6: start;
+    --input-date-width: 35vw;
+    --input-date-height: 27vh;
+    --input-width: 31vw; 
+    --input-height: 4vh;   
+    --font-size-placeholder: 2vh;
+    --font-size-buttons: 3vh;
+    --font-family: 'Inter', sans-serif;
+}
+
+body{
+    font-family: var(--font-family);
+    background-color: var(--background-color-);
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box !important;
+    width: 100%;
+}
+
+.section-all{
+    width: 100%;
+    /* height: 100vh; */
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: auto auto;
+    grid-template-areas: 
+    "info"
+    "main";
+}
+.section-all section:nth-child(1){
+    background-color: var(--background-color-);
+    display: flex;
+    height: 6vh;
+    justify-content: center;
+    padding-top: 7vh;
+    padding-bottom: 4vh;
+}
+.section-all section:nth-child(2){
+    background-color: #ffff;
+    border-radius: 40px 40px 0 0;
+    display: grid;
+    overflow-y: auto;
+    overflow-x: hidden;
+    justify-content: center;
+    align-content: start;
+}
+/* .content-section{
+    align-items: center;
+} */
+
+.profile-info{
+    width: 90%;
+    /* height: 10vh; */
+    display: grid;
+    place-content: center;
+    grid-template-columns: 1fr 10fr 1fr;
+    grid-template-rows: 5vh 10vh;
+    grid-template-areas: 
+    "img text exit";
+}
+.profile-info div:nth-child(1){
+    grid-area: img;
+    align-self: star;
+    justify-self: start;
+}
+.profile-info div:nth-child(2){
+    grid-area: text;
+    line-height: 0;
+    justify-self: start;
+}
+.profile-info div:nth-child(3){
+    grid-area: exit;
+    padding-left: 6vw;
+    justify-self: end;
+}
+.content-main nav:nth-child(1){
+    width: 90vw;    
+    height: 23vh;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 10vh 10vh;
+    grid-template-areas: 
+    "titulo titulo titulo"
+    "nav nav1 nav2";
+}
+.categorias h2:nth-child(1){
+    width: 100%;
+    padding-bottom: 4vh;
+    border-bottom: solid 2px #69697043;
+    grid-area: titulo;
+    justify-self:start;
+}
+.categorias button:nth-child(2){
+    grid-area: nav;
+    justify-self:center;
+}
+.categorias button:nth-child(3){
+    grid-area: nav1;
+    justify-self:center;
+}
+.categorias button:nth-child(4){
+    grid-area: nav2;
+    justify-self:center;
+}
+.content-main .item-produto{
+    height: auto;
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: auto;
+}
+.produtos h2:nth-child(1){
+    justify-self: start;
+}
+/* .categorias h2{
+
+} */
+.produtos .tamanho{
+    justify-self: center;
+    height: 10vh;
+    margin-top: 10vh;
+}
+.item-produto{
+    color: #595760;
+    line-height: 1;
+    border-top: 1px solid #E5E8EA;
+    border-bottom: 1px solid #E5E8EA;
+    display: grid;
+    /* grid-template-columns: 0px 0px 0px; */
+    grid-template-rows: 5vh;
+    grid-template-areas: 
+    "item valor qtd";
+}
+.item-produto div:nth-child(1){
+    grid-area: item;
+    justify-self: start;
+    align-self: center;
+    width: 30vw;
+}
+.item-produto p:nth-child(2){
+    grid-area: valor;
+    justify-self: center;
+    align-self: center;
+}
+.item-produto div:nth-child(3){
+    grid-area: qtd;
+    justify-self: end;
+    align-self: center;
+}
+
+.p{
+    word-break: break-word;
+    white-space: normal;
+}
+#qtd .material-icons{
+    color: #595760;
+    cursor: pointer;
+}
+
+#qtd span{
+    font-size: 1.2rem;
+    letter-spacing: 3px;
+}
+
+.total{
+    width: 100%;
+    display: grid;
+    place-content:center;
+    color: #595760;
+    background-color: #ffff;
+    bottom: 8%;
+    position: fixed;
+    height: 11%;
+    box-shadow: 4px 4px 50px 0px #0000000a;
+    grid-template-columns: auto auto auto 100px;
+    grid-template-rows: 3vh;
+    grid-template-areas: 
+    "text total item button";
+}
+.total p:nth-child(1){
+    grid-area: text;
+    padding-right: 12vw;
+    align-self: center;
+}
+.total p:nth-child(2){
+    grid-area: total;
+    padding-right: 12vw;
+    align-self: center;
+}
+.total p:nth-child(3){
+    grid-area: item;
+    padding-right: 12vw;
+    align-self: center;
+}
+.total button:nth-child(4){
+    grid-area: button;
+    border-style: solid var(--background-color-);
+    border-radius: 5px;
+    background-color: var(--background-color-);
+    color: white;
+    width: 115px;
+    height: 35px;
+    align-self: center;
+}
+.total button:hover{
+    cursor: pointer;
+    scale: 1.01;
+}
+
+.categorias button{
+    background-color: var(--background-color-);
+    width: 215px;
+    height: 70px;
+    border-radius: 10px;
+    border-style: none;
+}   
+br{
+    display: none;
+}
+.categorias a{
+    color: #ffff;
+    font-size: 16px;
+    text-decoration: none;
+    width: 100%;
+}
+.profile-info a{
+    text-decoration: none;
+    color: #ffff;
+    font-size: 15px;
+    line-height: 0;
+}
+.profile-info h1{
+    font-size: 28px;
+    font-weight: 600;
+    color: #ffff;
+    line-height: 0;
+}
+.logo-account .material-icons {
+    color: #ffff;
+    font-size: 60px;
+}
+.logo-exit .material-icons {
+    font-size: 30px; /* Tamanho do ícone */
+    cursor: pointer;
+    color: #ffff;
+}
+.logo-account,.logo-exit{
+    height: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.logo-account{
+    width: 80px;
+}
+.produtos h3{
+    color: var(--background-color-);
+}
+@media screen and (max-width:780px) {
+    .section-all section:nth-child(1){
+        height: 4vh;
+        justify-content: center;
+        padding-top: 7vh; 
+        padding-bottom: 2vh;
+    }
+    .categorias button{
+        background-color: var(--background-color-);
+        width: 100px;
+        height: 100px;
+        border-radius: 10px;
+        border-style: none;
+    }   
+    br{
+        display: block;
+    }
+
+}
+@media screen and (max-width:340px) {
+    h2{
+        font-size: 20px;
+    }
+    .profile-info h1{
+        font-size: 22px;
+    }
+    .logo-account .material-icons {
+        font-size: 50px;
+    }
+    .logo-account{
+        height: 70px;
+    }
+    .logo-exit .material-icons {
+        font-size: 20px;
+    }
+    .profile-info a{
+        font-size: 13px;
+    }
+    .profile-info{
+        grid-template-columns: 72px auto 40px;
+    }
+    .profile-info div:nth-child(3){
+        grid-area: exit;
+        padding-left: 0vw;
+    }
+    .categorias button{
+        width: 80px;
+        height: 80px;
+    }
+    .content-main nav:nth-child(1){
+        grid-template-rows: 9vh 0;
+    }
+    
+}

@@ -1,0 +1,82 @@
+:root{
+  --primary-color: #E8E8E8;
+  --background-color-: #224864;
+  --border-width-buttons: 0.2rem;
+  --font-size-buttons: 3vh;
+  --font-family: 'Inter', sans-serif;
+}
+
+#produto{
+  width: 10rem;
+  font-size: 1rem;
+}
+
+/*Estutura sessão dois*/
+.form{
+  width: 70vh;
+  height: 60vh;
+  box-shadow: 3px 3px 6px 6px rgba(1, 1, 1, 0.060); 
+  border-radius: 10px;
+  padding-top: 20px;
+  padding-left: 50px;
+  background-color: #ffffff;
+  display: grid;
+  grid-template-columns: auto;
+  grid-template-rows: 4vh 9vh 4vh 9vh 4vh 10vh 4vh;
+  grid-template-areas: 
+  "div"
+  "div"
+  "div"
+  "div"
+  "div"
+  "div"
+  "div"
+  "div";
+}
+.form div:nth-child(8){
+margin-top: 1.5rem;
+display: flex;
+justify-content:center;
+padding-right: 7vh;
+}
+
+input{
+width: 45vh;
+height: 6vh;
+border: #0000001e solid 1.5px;
+border-radius: 8px;
+padding-left: 0.5rem;
+background-color: white;
+}
+
+input#codigo{
+  width: 20vh;
+}
+select#produto{
+  border: #0000001e solid 1.5px;
+  border-radius: 8px;
+}
+
+button{
+  height: 46px;
+  width: 50vh;
+  font-size: var(--font-size-buttons);
+  font-weight: bold;
+  background-color: var(--background-color-);
+}
+button:hover{
+  cursor: pointer;
+  scale: 1.01;
+}
+label{
+  font-weight: bold;
+}
+
+.material-icons:hover{
+  cursor: pointer;
+}
+
+#excluir-produto{
+  margin-left: 70px;
+}
+

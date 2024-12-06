@@ -1,0 +1,90 @@
+:root{
+    --primary-color: #E8E8E8;
+    --background-color-: #224864;
+    --border-width-buttons: 0.2rem;
+    --font-size-buttons: 3vh;
+    --font-family: 'Inter', sans-serif;
+}
+
+
+/*Estrutura do bloco de formulario*/
+.form{
+    width: 70vh;
+    height: 55vh;
+    box-shadow: 3px 3px 6px 6px rgba(1, 1, 1, 0.060); 
+    border-radius: 10px;
+    padding-top: 20px;
+    padding-left: 50px;
+    background-color: #ffffff;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 11vh 11vh 15vh 0vh;
+    grid-template-areas: 
+    "produto  codigo"
+    "qtd  valor"
+    "total total"
+    "buttom buttom";
+}
+.form div:nth-child(1){
+    grid-area: produto;
+}
+.form div:nth-child(2){
+    grid-area: codigo;
+}
+.form div:nth-child(3){
+    grid-area: qtd;
+}
+.form div:nth-child(4){ 
+    grid-area: valor;
+}
+.form div:nth-child(5){
+    grid-area: total;
+}
+.form div:nth-child(6){
+  grid-area: buttom;
+  display: flex;
+  justify-content:center;
+  padding-right: 7vh;
+}
+.quebra-linha{
+    display: block;
+}
+
+
+/*Estilização do bloco de formulario*/
+input{
+    width: 30vh;
+    height: 6vh;
+    border: #0000001e solid 1.5px;
+    border-radius: 8px;
+    padding-left: 0.5rem;
+    }
+    
+input#codigo{
+    width: 20vh;
+}
+input#valor-uni{
+    width: 20vh;
+}
+#produto{
+    width: 30vh;
+    height: 6vh;
+    border: #00000028 solid 1.5px;
+    border-radius: 8px;
+}
+button{
+    height: 46px;
+    width: 50vh;
+    font-size: var(--font-size-buttons);
+    font-weight: bold;
+}
+button:hover{
+    cursor: pointer;
+    scale: 1.01;
+}
+label{
+    font-weight: bold;
+}
+.material-icons:hover{
+    cursor: pointer;
+}

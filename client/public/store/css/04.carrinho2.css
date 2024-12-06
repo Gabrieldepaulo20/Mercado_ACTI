@@ -1,0 +1,131 @@
+html {
+    font-family: sans-serif;
+}
+
+#checkIcon {
+    font-size: 17vw;
+    margin: 3.5vh 41vw;
+    color: #224864;
+}
+
+h1 {
+    margin: -5vh 32vw 1vh;
+    width: 34vw;
+    font-weight: 700;
+    text-align: center;
+    color: #3D3D46;
+    font-size: clamp(2.5vw, 2vw, 1rem);
+}
+
+div p {
+    font-size: 1.5vw;
+    font-weight: 600;
+    text-align: center;
+    width: 62vw;
+    color: #224864;
+    margin: 0vh 18vw;
+}
+
+
+div button {
+    position: absolute;
+    font-weight: 600;
+    border-radius: 15px;
+    font-size: 119%;
+    border: 0;
+    height: 9vh;
+    width: 19vw;
+}
+
+div button:nth-child(1) {
+    margin: 6.5vh 40vw;
+    color: #fff;
+    background-color: #224864;
+}
+
+div button:nth-child(2) {
+    margin: 18vh 40vw;
+    border: 2.5px solid #224864 !important;
+    color: #224864;
+    background-color: #fff;
+}
+button{
+    cursor: pointer;
+}
+
+
+@media (max-width: 1060px) {
+    #checkIcon {
+        font-size: 28vw;
+        margin: 6.5vh 35vw;
+    }
+
+    h1 {
+        margin: -1vh 31vw 3vh;
+        width: 35vw;
+        font-size: clamp(3.5vw, 2vw, 1rem);
+    }
+
+    div p {
+        font-size: 2.5vw;
+        width: 72vw;
+        margin: 0vh 13vw;
+    }
+
+    div button {
+        font-weight: 600;
+        border-radius: 10px;
+        position: absolute;
+        font-size: 108%;
+        width: 40vw;
+        height: 10.75vw;
+    }
+
+    div button:nth-child(1) {
+        margin: 17vh 29vw
+    }
+
+    div button:nth-child(2) {
+        margin: 29vh 29vw;
+        border: 2.5px solid #224864 !important;
+        color: #224864;
+        background-color: #fff;
+    }
+}
+
+
+@media only screen and (max-width: 431px) and (max-height: 933px) {
+    #checkIcon {
+        font-size: 52vw;
+        margin: 13.5vh 22vw 8vh;
+    }
+
+    h1 {
+        margin: -1vh 21vw 3vh;
+        width: 54vw;
+        font-size: clamp(3.5vw, 5vw, 8rem);
+    }
+
+    div p {
+        font-size: 3.5vw;
+        width: 72vw;
+        margin: 0vh 13vw;
+    }
+
+    div button {
+        font-weight: 600;
+        border-radius: 10px;
+        position: absolute;
+        font-size: 108%;
+        width: 40vw;
+        height: 13vw;
+    }
+
+    div button:nth-child(1) {
+        margin: 7vh 28vw;
+    }
+
+    div button:nth-child(2) {
+        margin: 16vh 28vw;
+    }
+}
